@@ -1,0 +1,24 @@
+<div class="well row top-buffer">
+    {% for note in notes %}
+    <div class="col-md-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <strong>{{ note.title }}</strong>
+                <!-- Edit and delete buttons -->
+                <div class="pull-right">
+                    <a href=# class="btn btn-default">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    <button class="btn btn-default" id="btn_delete" onclick="deleteNote('{{ note.id }}')">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                </div>
+                <!-- ======================= -->
+            </div>
+            <div class="panel-body">
+                {{ note.note }}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>

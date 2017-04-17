@@ -1,21 +1,25 @@
-<!DOCTYPE html>
-<html lang="en-us">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" conent="width=device-width, initial-scale=1">
-    <title>My Amazing Note App</title>
-</head>
-<body>
-    <h1>Helo World!</h1>
-    <ul>
-	{% for note in notes %}
-	<li>
-    	    <div>
-	        {{ notes }}
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row top-buffer">
+    <div class="col-md-4 col-md-offset-4">
+        <form action="{% url 'index' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="txtNoteTitle" class="note-label">Title</label>
+                <input type="text" class="form-control" id="txtNoteTitle" name="title"
+                placeholder="Enter note title...">
             </div>
-	</li>
-	{% endfor %}
-    </ul>
-</body>
-</html>
+
+            <div class="form-group">
+                <label for="txtNoteContent" class="note-label">Content</label>
+                <textarea class="form-control" id="txtNoteContent" name="note"
+                    rows="3" placeholder="Enter note content..."></textarea>
+            </div>
+            <button type="submit" class="btn-block btn btn-primary" id="btnAdd" 
+            name="add_note">Submit</button>
+        </form>
+    </div>
+</div>
+{% include 'notes/note-display.html' %}
+{% endblock content %}

@@ -1,0 +1,26 @@
+.note-heading {
+    font-family: 'Pacifico', cursive;
+    font-size: 60px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+strong {
+    font-family: 'Cabin', sans-serif;
+    font-size: 20px;
+}
+
+.note-label {
+    font-family: 'Cabin', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: #fffffa;
+}
+
+.top-buffer {
+    margin-top: 20px;
+}
