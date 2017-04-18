@@ -7,9 +7,9 @@
     text-align: center;
 }
 
-strong {
+.note-title {
     font-family: 'Cabin', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .note-label {
@@ -23,4 +23,13 @@ body {
 
 .top-buffer {
     margin-top: 20px;
+}
+
+.pull-right > a, .pull-right > button {
+    border: 0;
+}
+
+.glyphicon {
+    cursor: pointer;
+    color: white;
 }
