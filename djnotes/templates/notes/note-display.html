@@ -6,7 +6,7 @@
                 <strong class="note-title">{{ note.title }}</strong>
                 <!-- Edit and delete buttons -->
                 <div class="pull-right">
-                    <a href="/edit/{{ note.id }}/" class="btn btn-primary">
+                    <a href="{% url 'update' note.id %}" class="btn btn-primary">
                         <span class="glyphicon glyphicon-pencil"></span>
                     </a>
                     <button class="btn btn-primary" id="btn_delete" onclick="deleteNote('{{ note.id }}')">
